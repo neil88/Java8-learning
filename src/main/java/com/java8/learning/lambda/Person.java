@@ -1,6 +1,6 @@
 package com.java8.learning.lambda;
 
-public class Person extends Human{
+public class Person extends Human {
     public String firstName;
     public String lastName;
 
@@ -12,22 +12,33 @@ public class Person extends Human{
         this.lastName = lastName;
     }
 
-    public Person(String firstName, String lastName,String cc) {
+    public Person(String firstName, String lastName, String cc) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
 
-    public void add(String firstName){
+    public void add(String firstName) {
 
     }
 
-    public String getFirstName() {
-        return firstName;
+
+    public static Person generate(String firstName, String lastName) {
+        return new Person("A", "B");
+    }
+
+    public static Person generate2() {
+        return new Person();
+    }
+
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public String getLastName() {
         return lastName;
     }
+
 
     @Override
     public String toString() {
@@ -35,5 +46,9 @@ public class Person extends Human{
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 '}';
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 }
