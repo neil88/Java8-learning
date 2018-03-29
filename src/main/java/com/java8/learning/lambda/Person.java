@@ -1,6 +1,6 @@
 package com.java8.learning.lambda;
 
-public class Person {
+public class Person extends Human{
     public String firstName;
     public String lastName;
 
@@ -21,7 +21,19 @@ public class Person {
 
     }
 
-    public String toString(){
-        return firstName+lastName;
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                '}';
     }
 }
