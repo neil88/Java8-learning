@@ -76,14 +76,14 @@ public class Collect {
         System.out.println("reduceStr1: " + reduceStr2);
 
         List<Person> personList = new ArrayList<>();
-        personList.add(new Person(10, 20));
-        personList.add(new Person(20, 30));
-        personList.add(new Person(30, 50));
-
-        BiFunction<Person, Person, Person> biFunction = (x, y) -> new Person(x.getAge() + y.getAge(), x.getRate() + y.getRate());
-        BinaryOperator<Person> binaryOperator1 = (x, y) -> new Person(x.getAge() + y.getAge(), x.getRate() + y.getRate());
-        Person total = personList.parallelStream().reduce(new Person(0, 0), biFunction, binaryOperator1);
-        System.out.println("total:" + total);
+//        personList.add(new Person(10, 20));
+//        personList.add(new Person(20, 30));
+//        personList.add(new Person(30, 50));
+//
+//        BiFunction<Person, Person, Person> biFunction = (x, y) -> new Person(x.getAge() + y.getAge(), x.getRate() + y.getRate());
+//        BinaryOperator<Person> binaryOperator1 = (x, y) -> new Person(x.getAge() + y.getAge(), x.getRate() + y.getRate());
+//        Person total = personList.parallelStream().reduce(new Person(0, 0), biFunction, binaryOperator1);
+//        System.out.println("total:" + total);
 
 
     }

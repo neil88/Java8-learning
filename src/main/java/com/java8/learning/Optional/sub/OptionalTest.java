@@ -7,6 +7,15 @@ import java.util.Optional;
  */
 public class OptionalTest {
     public static void main(String[] args) {
+//        test1();
+        Optional<Person> person = Optional.of(new Person());
+        Optional<Car> car = person.flatMap(p->p.getCar() == null ? Optional.empty():p.getCar() );
+        Optional<Insurance> insurance = car.flatMap(Car::getInsurance);
+        String empty = insurance.map(Insurance::getName).orElse("Empty");
+        System.out.println(empty);
+    }
+
+    private static void test1() {
         Optional<Person> person = Optional.of(new Person());
 //        person = person.get().getCar() == null ? Optional.empty() : person;
 
@@ -19,7 +28,5 @@ public class OptionalTest {
         Optional<String> nameOpt = insurance.map(Insurance::getName);
 
         System.out.println(nameOpt.orElse("null"));
-
-
     }
 }

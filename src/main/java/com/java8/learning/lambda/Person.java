@@ -1,5 +1,7 @@
 package com.java8.learning.lambda;
 
+import java.util.Objects;
+
 public class Person extends Human {
     public String firstName;
     public String lastName;
@@ -51,4 +53,22 @@ public class Person extends Human {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public boolean isFirstNameStartWithF(){
+        return getFirstName().startsWith("f");
+    }
+    public boolean isLastNameStartWithF(){
+        return getLastName().startsWith("f");
+    }
+
+    public boolean isFirstNameStartWith(String prefix){
+        Objects.requireNonNull(prefix);
+        return getFirstName().startsWith(prefix);
+    }
+
+
 }

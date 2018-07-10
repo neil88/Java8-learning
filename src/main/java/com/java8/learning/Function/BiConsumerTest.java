@@ -10,4 +10,6 @@ public class BiConsumerTest {
         //return void
         BiConsumer<Integer,Integer> accept=(x,y)->{};
     }
+
+
 }
